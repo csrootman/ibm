@@ -15,7 +15,7 @@ if [ ! -f "$IBMCLOUD" ]; then
     echo "${BLUE}download ibm-cloud-cli-release${END}"
     ver=$(curl -s https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/latest | grep -Po "(\d+\.){2}\d+")
     #ver=1.1.0
-    wget -q -Oibm_cli.tgz https://clis.cloud.ibm.com/download/bluemix-cli/$ver/linux64
+    wget -q -O ibm_cli.tgz https://clis.cloud.ibm.com/download/bluemix-cli/$ver/linux64
     if [ $? -eq 0 ]; then
         tar xzf ibm_cli.tgz
     else
